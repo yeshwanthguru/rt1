@@ -1,0 +1,7 @@
+<launch>
+
+	<node name="Tbctl_Goal" pkg="rt1_ass1" type="tbctl_server.py" output="screen"/>
+	<node name="My_world" pkg="stage_ros" type="stageros" args="$(find rt1_ass1)/world/exercise.world"/>	
+	<node name="Turtlebot_Controller" pkg="rt1_ass1" type="tbctl_client.py" output="screen"/>
+
+</launch>
